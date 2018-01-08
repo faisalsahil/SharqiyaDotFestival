@@ -1,0 +1,15 @@
+= simple_form_for(@user, url: url ) do |f|
+  = f.error_notification
+  = f.input :first_name, autofocus: true
+  = f.input :last_name
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :phone
+  - if @current_user_role == AppConstants::SUPER_ADMIN
+    = f.input :restaurant_branch_id, collection: RestaurantBranch.all.map { |r| ["#{r.try(:restaurant).try(:restaurant_name)}, #{r.street}", r.id] }, prompt: 'Select Restaurant'
+  - elsif @current_user_role == AppConstants::RESTAURANT
+    = f.input :restaurant_branch_id, as: :hidden, input_html: {value: current_user.restaurant_branch_id}
+  .form-actions
+    = link_to 'Cancel', users_path, class: 'btn btn-default'
+    = f.submit 'Save', class: 'btn btn-primary'

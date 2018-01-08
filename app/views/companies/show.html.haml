@@ -1,0 +1,45 @@
+%p#notice= notice
+%p
+  %strong.col-md-4 Company name:
+  = @company.company_name
+%p
+  %strong.col-md-4 Company logo:
+  - if @company.company_logo?
+    = link_to image_tag(@company.company_logo.url,:size => "160x100"), @company.company_logo.url, target: :_blank
+  - else
+    No Logo found
+%p
+  %strong.col-md-4 Short description:
+  = @company.short_description
+%p
+  %strong.col-md-4 Description:
+  = @company.description
+%p
+  %strong.col-md-4 Is seen:
+  = @company.is_seen
+%p
+  %strong.col-md-4 Is active:
+  = @company.is_active
+%p
+  .panel.panel-default
+    .panel-heading
+      %strong Company Addresses
+    .panel-body
+      %table.table.table-striped.table-hover.listing_table
+        %thead
+          %tr
+            %th Street
+            %th City
+            %th State
+            %th Zip
+        %tbody
+          - @company_addresses.each do |company_address|
+            %tr
+              %td= company_address.street
+              %td= company_address.city
+              %td= company_address.state
+              %td= company_address.zip
+
+= link_to 'Edit', edit_company_path(@company)
+|
+= link_to 'Back', companies_path

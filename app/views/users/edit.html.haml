@@ -1,0 +1,8 @@
+.x_panel
+  .x_title
+    %h2 Add User
+    .clearfix
+  .x_content
+    %div.row
+      .col-md-6
+        = render 'form', user: @user, url: update_user_user_path(@user)

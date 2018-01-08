@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 25
+  username: <%= ENV['SHARQIYA_API_DB_USERNAME']%>
+  password: <%= ENV['SHARQIYA_API_DB_PASSWORD']%>
+  host: <%= ENV['SHARQIYA_API_DB_HOST']%>
+
+
+development:
+  <<: *default
+  database: <%= ENV['SHARQIYA_API_DB_NAME'] %>
+staging:
+  <<: *default
+  database: <%= ENV['SHARQIYA_API_DB_NAME']%>
+production:
+  <<: *default
+  database: <%= ENV['SHARQIYA_API_DB_NAME']%>

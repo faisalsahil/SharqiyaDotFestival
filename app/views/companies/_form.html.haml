@@ -1,0 +1,18 @@
+= simple_form_for(@company) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :company_name
+    = f.input :company_logo, as: :file, :label => 'Choose company logo'
+    = f.input :short_description, placeholder: 'Enter short description'
+    = f.input :description, placeholder: 'Enter long description'
+    = f.input :is_seen
+    = f.input :is_active
+
+    = f.simple_fields_for :company_addresses do |company_address|
+      = render 'company_address_fields', f: company_address
+
+    .links
+      = link_to_add_association 'Add More Addresses', f, :company_addresses, class: 'btn btn-info'
+  .form-actions
+    = link_to 'Back', companies_path, class: 'btn btn-default'
+    = f.submit 'Save', class: 'btn btn-primary'

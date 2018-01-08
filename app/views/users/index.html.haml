@@ -1,0 +1,23 @@
+.x_panel
+  .x_title
+    %h2 Users
+    .clearfix
+  .x_content
+    %table.table.table-striped.table-hover.listing_table
+      %thead
+        %tr
+          %th Username
+          %th Email
+          %th Phone
+          %th Actions
+      %tbody
+        - @users&.each do |user|
+          %tr
+            %td= user.username
+            %td= user.email
+            %td= user.phone
+            %td
+              - if user.is_deleted?
+                = link_to 'Undo', user, method: :delete, data: { confirm: 'Are you sure?' }
+              - else
+                = link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }

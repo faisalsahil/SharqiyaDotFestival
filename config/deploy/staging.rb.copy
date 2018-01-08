@@ -1,0 +1,9 @@
+server '23.92.19.41', user: 'live', roles: %w{app db web}
+
+set :application, 'Sharqiya'
+
+set :deploy_to, '/home/live/Sharqiya'
+
+set :repo_url, 'git@gitrepos.com:rubyonrails/Sharqiya.git'
+
+set :tmp_dir, '/home/live/tmp'

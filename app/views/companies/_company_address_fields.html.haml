@@ -1,0 +1,14 @@
+.nested-fields
+  .panel.panel-default
+    .panel-heading
+      %strong Company Address
+    .panel-body
+      .col-md-3
+        = f.input :street, placeholder: 'Street', label: false
+      .col-md-3
+        = f.input :city, placeholder: 'city', label: false
+      .col-md-3
+        = f.input :state, placeholder: 'State', label: false
+      .col-md-3
+        = f.input :zip,placeholder: 'Zip', label: false
+    = link_to_remove_association 'x', f, class: 'btn btn-sm btn-danger'

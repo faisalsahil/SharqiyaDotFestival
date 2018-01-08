@@ -1,0 +1,89 @@
+.game-index {
+    padding: 15px 0 !important;
+}
+
+.existing {
+    display: none!important;
+}
+.restaurant_restaurant_branches_state {
+    margin-right: 10%;
+}
+.restaurant_restaurant_branches_city {
+    margin-right: 10%;
+}
+
+.restaurant_restaurant_branches_street {
+    margin-right: 10%;
+}
+.restaurant_restaurant_branches_zip {
+    margin-right: 10%;
+}
+.restaurant_restaurant_branches_longitude {
+    margin-right: 10%;
+}
+.restaurant_restaurant_branches_latitude {
+    margin-right: 10%;
+}
+
+.nested-fields:nth-child(1) .dynamic {
+    display: none;
+}
+
+.menu_menu_variations_variation_title {
+    margin-right: 10%;
+}
+
+.menu_menu_variations_variation_price {
+    margin-right: 10%;
+}
+
+.menu_menu_variations_variation_description {
+    margin-right: 10%;
+}
+
+.dynamic {
+    margin-left: 20%;
+}
+
+.menu_menu_ingredients_ingredient_title {
+    margin-right: 10%;
+}
+
+.menu_menu_ingredients_ingredient_price {
+    margin-right: 10%;
+}
+
+.menu_menu_ingredients_ingredient_description {
+    margin-right: 10%;
+}
+
+.menu_menu_ingredients_is_included {
+    margin-right: 10%;
+    width: 100px;
+}
+
+.menu_menu_ingredients_is_extra {
+    margin-right: 10%;
+    width: 80px;
+}
+
+.menu_menu_ingredients_is_active  {
+    margin-right: 10%;
+    width: 70px;
+}
+
+.form-actions {
+    margin-top: 2%;
+}
+
+.checkbox {
+    display: inline-block!important;
+    margin-left: 20px!important;
+}
+.checkbox:first-child {
+    margin-left: 0!important;
+}
+
+.margin_right_10_per {
+    margin-right: 10%;
+}

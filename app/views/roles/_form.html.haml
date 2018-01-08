@@ -1,0 +1,13 @@
+= simple_form_for(@role) do |f|
+  = f.error_notification
+  .form-inputs.row
+    .col-md-4
+      %fieldset.fieldset-border
+        - if @role.new_record?
+          %legend.fieldset-border New Role
+        - else
+          %legend.fieldset-border Edit Role
+        = f.input :name
+        .form-actions
+          = link_to 'Back', roles_path, class: 'btn btn-default'
+          = f.button :submit, class: 'btn btn-primary'

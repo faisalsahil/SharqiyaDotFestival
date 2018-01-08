@@ -1,0 +1,453 @@
+@import "mixins.less";
+
+.lighter {
+  font-weight: lighter;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.inline {
+  display: inline-block !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.center, .align-center {
+  text-align: center !important;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.align-middle {
+  vertical-align: middle !important;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.line-height-normal {
+  line-height: normal !important;
+}
+
+.line-height-1 {
+  line-height: 1 !important;
+}
+
+
+.biggerX (@index) when (@index < 310) {
+  .bigger-@{index} {
+    font-size: unit(@index, ~"%");
+  }
+  .biggerX(@index + 10);
+}
+
+.biggerX(110);
+.bigger-125 {
+  font-size: 125%;
+}
+
+.bigger-175 {
+  font-size: 175%;
+}
+
+.bigger-225 {
+  font-size: 225%;
+}
+
+.bigger-275 {
+  font-size: 275%;
+}
+
+.smallerX (@index) when (@index > 10) {
+  .smaller-@{index} {
+    font-size: unit(@index, ~"%");
+  }
+  .smallerX(@index - 10);
+}
+
+.smallerX(90);
+.smaller-75 {
+  font-size: 75%;
+}
+
+.widthX (@index) when (@index < 105) {
+  .width-@{index} {
+    width: unit(@index, ~"%") !important;
+  }
+  .widthX(@index + 5);
+}
+
+.widthX(20);
+
+.widthFixedX (@index) when (@index < 205) {
+  .width-fixed-@{index} {
+    width: unit(@index, ~"px") !important;
+  }
+  .widthFixedX(@index + 5);
+}
+
+.widthFixedX(20);
+
+.width-48 {
+  width: 48% !important;
+}
+
+.width-auto {
+  width: auto !important;
+}
+
+.width-full {
+  width: 100% !important;
+}
+
+.height-auto {
+  height: auto !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-border-bottom {
+  border-bottom: none !important;
+}
+
+.no-border-top {
+  border-top: none !important;
+}
+
+.no-border-left {
+  border-left: none !important;
+}
+
+.no-border-right {
+  border-right: none !important;
+}
+
+.border-left {
+  border-left: 1px solid #2C6AA0;
+}
+
+.border-right {
+  border-right: 1px solid #2C6AA0;
+}
+
+.border-top {
+  border-top: 1px solid #2C6AA0;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #2C6AA0;
+}
+
+.border-left-white {
+  border-left: 1px solid #FFFFFF;
+}
+
+.border-right-white {
+  border-right: 1px solid #FFFFFF;
+}
+
+.border-top-white {
+  border-top: 1px solid #FFFFFF;
+}
+
+.border-bottom-white {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.border-left-dark {
+  border-left: 1px solid #888;
+}
+
+.border-right-dark {
+  border-right: 1px solid #888;
+}
+
+.border-top-dark {
+  border-top: 1px solid #888;
+}
+
+.border-bottom-dark {
+  border-bottom: 1px solid #888;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
+}
+
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+.margin (@index) when (@index < 51) {
+  .margin-@{index} {
+    margin: unit(@index, ~"px") !important;
+  }
+  .margin(@index + 5);
+}
+
+.margin(5);
+
+.marginTop (@index) when (@index < 51) {
+  .margin-top-@{index} {
+    margin-top: unit(@index, ~"px") !important;
+  }
+  .marginTop(@index + 5);
+}
+
+.marginTop(5);
+
+.marginLeft (@index) when (@index < 51) {
+  .margin-left-@{index} {
+    margin-left: unit(@index, ~"px") !important;
+  }
+  .marginLeft(@index + 5);
+}
+
+.marginLeft(5);
+
+.marginButtom (@index) when (@index < 31) {
+  .margin-bottom-@{index} {
+    margin-bottom: unit(@index, ~"px") !important;
+  }
+  .marginButtom(@index + 5);
+}
+
+.marginButtom(5);
+
+.marginRight (@index) when (@index < 31) {
+  .margin-right-@{index} {
+    margin-right: unit(@index, ~"px") !important;
+  }
+  .marginRight(@index + 5);
+}
+
+.marginRight(5);
+
+.padding (@index) when (@index < 51) {
+  .padding-@{index} {
+    padding: unit(@index, ~"px") !important;
+  }
+  .padding(@index + 5);
+}
+
+.padding(5);
+
+.paddingTop (@index) when (@index < 31) {
+  .padding-top-@{index} {
+    padding-top: unit(@index, ~"px") !important;
+  }
+  .paddingTop(@index + 5);
+}
+
+.paddingTop(5);
+
+.paddingLeft (@index) when (@index < 51) {
+  .padding-left-@{index} {
+    padding-left: unit(@index, ~"px") !important;
+  }
+  .paddingLeft(@index + 5);
+}
+
+.paddingLeft(5);
+
+.paddingButtom (@index) when (@index < 31) {
+  .padding-bottom-@{index} {
+    padding-bottom: unit(@index, ~"px") !important;
+  }
+  .paddingButtom(@index + 5);
+}
+
+.paddingButtom(5);
+
+.paddingRight (@index) when (@index < 31) {
+  .padding-right-@{index} {
+    padding-right: unit(@index, ~"px") !important;
+  }
+  .paddingRight(@index + 5);
+}
+
+.paddingRight(5);
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.no-hover-underline:hover {
+  text-decoration: none !important;
+}
+
+.no-shadow, .no-box-shadow {
+  .box-shadow(none) !important;
+}
+
+.no-text-shadow {
+  text-shadow: none !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+/* <hr /> like spacing by using div, e.g <div class="hr hr-32"></div> */
+.hr {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  font-size: 0;
+  border-top: 1px solid #E3E3E3;
+  margin: 12px 0;
+}
+
+.hr-double {
+  height: 3px;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.hr.dotted, .hr-dotted {
+  border-top-style: dotted;
+}
+
+.hr-double.dotted {
+  border-bottom-style: dotted;
+}
+
+.hrX (@index) when (@index > 0) {
+  .hr-@{index}, .hr@{index} {
+    margin: unit(@index, px) 0;
+  }
+  .hrX(@index - 2);
+}
+
+.hrX(32);
+
+/* some spacing classes, use like <div class="space-24"></div> */
+.space() {
+  max-height: 1px;
+  min-height: 1px;
+  overflow: hidden;
+}
+
+.space {
+  .space();
+  margin: 12px 0;
+}
+
+.vspace-xs, .vspace-sm, .vspace-md, .vspace-lg {
+  .space();
+  display: none;
+  margin: 12px 0;
+}
+
+/* visible only on smaller devices where grid columns are stacked on top of each other */
+
+.spaceX (@index) when (@index > 0) {
+  .space-@{index} {
+    .space();
+    margin: unit(@index, px) 0 unit(@index - 1, px);
+  }
+  .vspace-@{index},
+  .vspace-xs-@{index},
+  .vspace-sm-@{index},
+  .vspace-md-@{index},
+  .vspace-lg-@{index} {
+    .space();
+    margin: unit(@index, px) 0 unit(@index - 1, px) 0;
+  }
+  .spaceX(@index - 2);
+}
+
+.spaceX(32);
+//produce spaces
+
+
+
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+
+@media print {
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+}

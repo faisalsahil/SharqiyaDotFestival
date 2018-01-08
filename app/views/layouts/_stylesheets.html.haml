@@ -1,0 +1,17 @@
+%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+/ Meta, title, CSS, favicons, etc.
+%meta{:charset => "utf-8"}/
+%meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+%meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+%title Sharqiya
+
+= stylesheet_link_tag "application", :media => "all"
+
+- if include_controller_css?
+  = stylesheet_link_tag "controllers/#{controller.controller_name}"
+
+= yield(:stylesheets)
+
+= csrf_meta_tags
+
+
